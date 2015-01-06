@@ -209,7 +209,7 @@ var NethServerPhoneHome = (function () {
      */
     function getNethServerInstallations(cb) {
         try {
-            chrome.browserAction.setBadgeText({ text: 'XHR' });
+            chrome.browserAction.setBadgeText({ text: '...' });
             $.ajax({
                 url:   'http://www.nethserver.org/phone-home/index.php?',
                 type:  'POST',

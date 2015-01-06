@@ -1,0 +1,10 @@
+{
+    "extName": {
+        "message": "NethServer Phone Home",
+        "description": "Nome dell'estensione."
+    },
+    "extDescription": {
+        "message": "Visualizza il numero d'installazioni NethServer nel mondo.",
+        "description": "Descrizione dell'estensione."
+    }
+}

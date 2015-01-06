@@ -1,0 +1,10 @@
+{
+    "extName": {
+        "message": "NethServer Phone Home",
+        "description": "Extension name."
+    },
+    "extDescription": {
+        "message": "Display NethServer's installation worldwide.",
+        "description": "Extension description."
+    }
+}
