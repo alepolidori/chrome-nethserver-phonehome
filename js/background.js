@@ -221,9 +221,17 @@ var NethServerPhoneHome = (function () {
                     var i;
                     var tot  = 0;
                     var data = JSON.parse(JSON.parse(data));
+                    var installations;
+                    var values;
 
                     for (i = 0; i < data.nethservers.length; i++) {
-                        tot += parseInt(data.nethservers[i].num_installation);
+                        installations = data.nethservers[i].installations;
+                        values = installations.split(',');
+                        for(var j = 0; j < values.length; j++) {
+                            var result = values[j].split('#');
+                            var num = result[1];
+                            tot += parseInt(num);
+                      }
                     }
                     cb(tot);
                     idTimeoutUpdate = setTimeout(updateBadge, intervalPolling);
