@@ -1,7 +1,7 @@
 {
     "name": "__MSG_extName__",
     "description": "__MSG_extDescription__",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "author": "Alessandro Polidori",
     "manifest_version": 2,
     "default_locale": "en",
@@ -19,7 +19,7 @@
         "32":  "img/logo32.png",
         "48":  "img/logo48.png",
         "128": "img/logo128.png",
-        "256": "img/logo128.png"
+        "256": "img/logo256.png"
     },
     "browser_action": {
         "default_icon": {
