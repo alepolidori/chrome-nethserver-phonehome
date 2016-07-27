@@ -213,7 +213,7 @@ var NethServerPhoneHome = (function () {
             $.ajax({
                 url:   'http://www.nethserver.org/phone-home/index.php?',
                 type:  'GET',
-                data:  'method=get_info&interval=1',
+                data:  'method=get_info&interval=7',
                 cache: false
 
             }).done(function (data, textStatus, jqXHR) {
