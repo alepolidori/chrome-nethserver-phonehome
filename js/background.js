@@ -19,7 +19,7 @@ var NethServerPhoneHome = (function () {
      * @readOnly
      * @default "http://www.nethserver.org/phone-home/widget_map.html"
      */
-    var URL_PHONE_HOME = 'http://www.nethserver.org/phone-home/widget_map.html';
+    var URL_PHONE_HOME = 'http://www.nethserver.org/phone-home/index.html';
 
     /**
      * If debug is activated.
@@ -212,20 +212,20 @@ var NethServerPhoneHome = (function () {
             chrome.browserAction.setBadgeText({ text: '...' });
             $.ajax({
                 url:   'http://www.nethserver.org/phone-home/index.php?',
-                type:  'POST',
-                data:  'method=get_info',
+                type:  'GET',
+                data:  'method=get_info&interval=1',
                 cache: false
 
             }).done(function (data, textStatus, jqXHR) {
                 try {
                     var i;
                     var tot  = 0;
-                    var data = JSON.parse(JSON.parse(data));
+                    var nethservers = data;
                     var installations;
                     var values;
 
-                    for (i = 0; i < data.nethservers.length; i++) {
-                        installations = data.nethservers[i].installations;
+                    for (i = 0; i < nethservers.length; i++) {
+                        installations = nethservers[i].installations;
                         values = installations.split(',');
                         for(var j = 0; j < values.length; j++) {
                             var result = values[j].split('#');
