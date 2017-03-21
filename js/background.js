@@ -19,7 +19,7 @@ var NethServerPhoneHome = (function () {
      * @readOnly
      * @default "http://www.nethserver.org/phone-home/widget_map.html"
      */
-    var URL_PHONE_HOME = 'http://www.nethserver.org/phone-home/index.html';
+    var URL_PHONE_HOME = 'https://www.nethserver.org/phone-home/index.html';
 
     /**
      * If debug is activated.
