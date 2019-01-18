@@ -188,7 +188,10 @@ var NethServerPhoneHome = (function () {
             if (debug) { console.log('update badge'); }
             getNethServerInstallations(function (value) {
                 try {
-                    setTimeout(function () { chrome.browserAction.setBadgeText({ text: value.toString() }); }, 2000);
+                    setTimeout(function () {
+                        chrome.browserAction.setBadgeText({ text: value.toString() });
+                        chrome.browserAction.setTitle({ title: value.toString() + ' NethServer worldwide' });
+                    }, 2000);
                 } catch (err) {
                     console.error(err.stack);
                     chrome.browserAction.setBadgeText({ text: '?' });
